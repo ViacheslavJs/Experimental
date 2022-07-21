@@ -319,7 +319,7 @@ footer p {
         <span id="close">&times;</span>
 
         <h2>Experimental project</h2>
-        <p>Float elements, pop-up gallery without using the jquery library.</p>
+        <p>Float elements, pop-up gallery without using the jQuery library.</p>
         <br>
 
 <p>Suspendisse potenti. Ut in luctus eros. Mauris pulvinar vehicula aliquet. Etiam imperdiet eleifend luctus. Duis ut justo nec eros ornare consectetur. Vestibulum convallis condimentum varius. Maecenas rutrum porta varius. Phasellus volutpat sem id sagittis luctus. Morbi vitae quam vitae nisi iaculis dignissim.</p>
@@ -328,8 +328,8 @@ footer p {
 <div id="layer">
  
         <div id="big-img-1">
-		  <picture>			  
-		    <source media="(max-width: 405px)" srcset="img/small/starlandscape-s.png">
+	  <picture>			  
+            <source media="(max-width: 405px)" srcset="img/small/starlandscape-s.png">
             <source media="(max-width: 635px)" srcset="img/middle/starlandscape-m.png">
             <source media="(min-width: 800px)" srcset="img/big/starlandscape-b.png">	   
             <img src="img/big/starlandscape-b.png" alt="starlandscape">
@@ -374,9 +374,9 @@ footer p {
 
 
 		
-		<div id="big-img-2">
-		  <picture>	
-		    <source media="(max-width: 405px)" srcset="img/small/observatory-s.png">
+	<div id="big-img-2">
+	  <picture>	
+	    <source media="(max-width: 405px)" srcset="img/small/observatory-s.png">
             <source media="(max-width: 635px)" srcset="img/middle/observatory-m.png">
             <source media="(min-width: 800px)" srcset="img/big/observatory-b.png">	 		   
             <img src="img/big/observatory-b.png" alt="observatory">
@@ -407,9 +407,9 @@ footer p {
 
 
 		
-		<div id="big-img-3">
-		  <picture>
-		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+        <div id="big-img-3">
+	  <picture>
+	    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
             <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
             <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
             <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
@@ -665,154 +665,9 @@ footer p {
         </footer>  
 
       </section>
-    </main>
+    </main>  
   
-  
-  <script>
-              
-        /*let layer = document.getElementById('layer');
-               
-        let bigImg1 = document.getElementById('big-img-1'); 
-        let bigImg2 = document.getElementById('big-img-2');
-        let bigImg3 = document.getElementById('big-img-3'); 
-                            
-        let preview1 = document.getElementById('small-1');
-        let preview2 = document.getElementById('small-2');
-        let preview3 = document.getElementById('small-3');
-        
-        
-        let h1 = document.getElementById('hd1');
-        let h2 = document.getElementById('hd2');
-        let h3 = document.getElementById('hd3');
-        
-             
-        let iconClose = document.getElementById('close'); // инициализация кнопки close         
-                
-        let hideOut = 
-            function() {                
-                  iconClose.style.display = 'block';                   
-            }
-            
-        let showOut = 
-            function() {
-                  iconClose.style.display = 'none';
-            }
-        
-        iconClose.style.display = 'none'; // скрывать кнопку close при загрузке
-        
-        layer.style.display = 'none';
-        bigImg1.style.display = 'none';
-        bigImg2.style.display = 'none';
-        bigImg3.style.display = 'none';
-        
-        // функция кнопки close 
-        iconClose.onclick = function() {
-            layer.style.display = 'none';
-            bigImg1.style.display = 'none';
-            bigImg2.style.display = 'none';
-            bigImg3.style.display = 'none';
-            
-            hd1.style.display = 'block';
-            hd2.style.display = 'block';
-            hd3.style.display = 'block';
-            
-            showOut();
-        }
-       
-        preview1.onclick = function(event) {
-            event = event || window.event;
-            if(event.preventDefault) {
-                event.preventDefault();
-            } else {
-                event.returnValue = false;
-            }
-              
-            layer.style.display = 'block';
-            bigImg1.style.display = 'block';
-            
-            hd2.style.display = 'none';
-            hd3.style.display = 'none';
-            hd1.style.display = 'block';
-            
-            hideOut();           
-        }
-            
-        preview2.onclick = function(event) {
-            event = event || window.event;
-            if(event.preventDefault) {
-                event.preventDefault();
-            } else {
-                event.returnValue = false;
-            }
-            
-            layer.style.display = 'block';            
-            bigImg2.style.display = 'block';
-            
-            hd1.style.display = 'none';
-            hd3.style.display = 'none';
-            hd2.style.display = 'block';
-             
-            hideOut();    
-        }
-            
-        preview3.onclick = function(event) {
-            event = event || window.event;
-            if(event.preventDefault) {
-                event.preventDefault();
-            } else {
-                event.returnValue = false;
-            }
-              
-            layer.style.display = 'block';            
-            bigImg3.style.display = 'block';
-            
-            hd1.style.display = 'none';
-            hd2.style.display = 'none';
-            hd3.style.display = 'block';
-            
-            hideOut();          
-        }
-        
-        // убрать галерею кликом по подложке или фото 
-        
-        layer.onclick = function() {
-            layer.style.display = 'none';
-            bigImg1.style.display = 'none';
-            bigImg2.style.display = 'none';
-            bigImg3.style.display = 'none';
-            hd1.style.display = 'block';
-            hd2.style.display = 'block';
-            hd3.style.display = 'block';
-            showOut();
-        }
-           
-        bigImg1.onclick = function() {
-            layer.style.display = 'none';
-            bigImg1.style.display = 'none';
-            hd1.style.display = 'block';
-            hd2.style.display = 'block';
-            hd3.style.display = 'block';  
-            showOut();         
-        }
-            
-        bigImg2.onclick = function() {
-            layer.style.display = 'none';            
-            bigImg2.style.display = 'none'; 
-            hd1.style.display = 'block';
-            hd2.style.display = 'block';
-            hd3.style.display = 'block';
-            showOut();                                 
-        }   
-            
-        bigImg3.onclick = function() {
-            layer.style.display = 'none';           
-            bigImg3.style.display = 'none';
-            hd1.style.display = 'block';
-            hd2.style.display = 'block';
-            hd3.style.display = 'block';
-            showOut();
-        }   
-        */       
+<script>
                     
 let layer = document.getElementById('layer');
                
@@ -941,17 +796,7 @@ let showOut =
         
     }           
                                             
-</script>    
-        
-        
-        
-        
-
-        
-                                     
-        
-    </script>
-  
+</script>
   
 </body>
 </html>
