@@ -237,6 +237,20 @@ footer p {
           top: 25px; /* 28px (26px - притягивание кнопки в одной плоскости) */
 	      right: 26px; /* 28px (26px - притягивание кнопки в одной плоскости) */
       }
+
+
+      /* Animation for close */
+
+      #close {
+          animation-name: draw;
+          animation-duration: 0.6s; 
+      }
+
+      @keyframes draw {
+          from {transform:scale(2)}
+          to {transform:scale(1)}
+      }    
+      /***Конец анимации***/
       
       #layer {
 	      position: fixed;
@@ -290,8 +304,10 @@ footer p {
 	  #big-img-2,
 	  #big-img-3 {		    
 	      position: absolute;
-		  right: 0;		 top: 0px; bottom: 0px;   
-		  left: 0;	 
+	      right: 0;		
+              top: 0px; 
+              bottom: 0px;   
+              left: 0;	 
           margin: auto;       
           background: #2b2b2b;      
           z-index: 2;   
