@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experimental</title>
+<style>
+
+html {
+
+    box-sizing: border-box; 
+  
+}
+
+
+html {
+
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: gray; 
+  
+}
+
+body {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white; 
+   
+}
+
+
+*, *:before, *:after {
+
+    box-sizing: inherit;
+  
+}
+
+.column {
+
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;     
+    padding: 0 8px; 
+  
+}
+
+
+/***** media *****/
+@media screen and (max-width: 860px) {
+
+  .column {
+  
+    min-width: 100%;
+    display: block; 
+    
+  }      
+  
+}
+
+@media screen and (max-width: 375px) {
+
+  html {
+  
+    font-size: 22px;
+  
+  }    
+  
+  h1 {
+  
+    margin: 15px 0px 0px 0px; 
+    font-size: 18px;
+   
+  } 
+  
+  h2 {
+  
+    margin: 15px 0px 0px 12px;
+  
+  }
+  
+  .button {
+   
+    margin: 0px auto 16px auto;
+   
+   }  
+
+  .mail {
+  
+    font-size: 16px;
+    
+  }  
+  
+  .button {
+   
+    margin: 0px auto 16px auto;
+   
+   }  
+
+  footer {
+  
+    min-height: 380px;
+    width: 100%;
+    
+  }  
+
+  section {
+  
+    min-height: calc(100% - 380px); 
+   
+  }     
+  
+}
+/***** media *****/
+
+
+#group .mail {
+
+	margin-bottom: 30px; 
+    
+}
+
+.card {
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+   
+}
+
+.container {
+
+    padding: 0 16px;
+    
+}
+
+.container::after, .row::after {
+
+    content: "";
+    clear: both; 
+    display: table; 
+   
+}
+
+.title {
+
+    color: grey;
+  
+}
+
+.button {
+
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #3e5e8c;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  
+}
+
+.button:hover {
+
+    background-color: #555;
+  
+}
+
+header {
+
+    background: url("img/header.png") no-repeat center; /* пробел не должен содержаться 
+                                    в адресе, если он там есть, то: заменить пробел на %20, 
+                                         написать адрес в кавычках,экранировать пробел \ */
+    background-size: cover; /* cover тоже что и background-size: 1200px;*/        
+    height: 200px;  
+                 
+}
+
+section {
+
+    padding: 0px;  
+    min-height: calc(100% - 210px);      
+    margin: 0 10px;         
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);   
+    
+}
+      
+main {
+
+    height: 100%;
+    width: 100%;
+    margin: auto;
+   		 
+}
+      
+#description  {
+			
+    margin-top: 2.5%;
+     
+}
+	  
+p {
+
+    line-height: 1.5;
+    padding: 0px 10px 0px 10px;	
+   
+}
+      
+h1 {
+
+    margin: 12px 10px 0px 40px;
+    font-size: 18px;
+    color: #fff;
+   
+}
+
+h2 {
+
+    margin: 30px 0px 0px 10px;
+   
+}
+      
+footer {
+
+    height: 210px; /* auto */
+    background: #e2e2e2;
+    width: 100%;
+   				
+}
+			
+footer p {
+
+    padding: 10px 15px 15px;
+   
+}
+
+.sticker {
+    
+    border: 1px solid rgb(42, 77, 128, .1);
+	width: 270px;
+	height: 40px;
+	margin-left: -10px;
+	margin-top: 20px;
+	background: rgba(42, 77, 128, .6); 
+	
+
+}
+    	  
+/* стиль для значка в виде jpeg */
+/* 
+.icon {
+
+	display: none;
+	position: fixed;		      
+	border-radius: 7px;         
+	top: 30px;
+	right: 30px;	    	
+	width: 35px;
+    height: 35px;
+	z-index: 3; 
+	transition: 0.2s;
+}
+	  
+.icon img {
+   
+    border-radius: 9px;      
+       	    	  		    		    	
+}
+
+.icon:hover,
+.icon:focus { 
+         
+    text-decoration: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    top: 28px; 
+    right: 28px; 
+    
+}
+*/
+
+/* стиль для значка генерируемого при помощи &times; */
+.icon {
+
+    display: none;
+    position: fixed;	
+	border-radius: 7px;         
+	top: 20px;
+	right: 30px;	    	
+	z-index: 3;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.2s;
+    		      
+}
+	  
+.icon:hover,
+.icon:focus { 
+        
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 47px;
+    top: 17px;  
+	right: 27px; 
+	
+}
+
+.iconCard {
+
+    display: inline-block;
+    position: absolute;
+	border-radius: 7px;         	
+	top: calc(5px );
+	right: calc(9px);		
+	z-index: 3;
+    color: #3e5e8c;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.2s;
+    		      
+}
+	  
+.iconCard:hover,
+.iconCard:focus { 
+        
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 21px;
+    top: calc(4px);  
+	right: calc(5px); 
+	
+}
+
+.iconBottom {
+
+    display: inline-block;
+    position: absolute;
+	border-radius: 7px;         
+	bottom: calc(5px); 	/*top: 15px;*/
+	right: calc(9px);	  	
+	z-index: 3;
+    color: #3e5e8c;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.2s;
+
+}
+
+.iconBottom:hover,
+.iconBottom:focus { 
+        
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 21px;
+    bottom: calc(4px);  
+	right: calc(5px); 
+	
+}
+
+
+/* Animation for icon */
+.icon, 
+.iconCard {
+    animation-name: draw;
+    animation-duration: 0.6s; 
+}
+
+@keyframes draw {
+    from {transform:scale(2)} /* 2 или 0 */
+    to {transform:scale(1)}
+}
+
+.preview-cursor {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.preview-cursor:hover {
+    opacity: 0.8;
+}
+
+/* Animation for gallery*/
+.gallery,
+.catalog {
+
+    animation-name: appearance;
+    animation-duration: 0.6s; 
+
+}
+
+@keyframes appearance {
+
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+    
+}
+
+.preview-cursor {
+    
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
+.preview-cursor:hover {
+    
+    opacity: 0.8;
+      
+}
+/***Конец анимации***/
+
+	 	 	      
+#layer {
+
+    display: none;
+	position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+	bottom: 0;		    
+	background: rgba(0, 0, 0, .6);  
+	z-index: 1;	      
+	overflow: auto;
+	
+}
+
+#group {
+
+    display: none;
+	position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+	bottom: 0;		    
+	background: rgba(0, 0, 0, .6);  
+	z-index: 1;	      
+	overflow: auto;
+	
+}
+	  
+img {
+
+    display: block;
+    margin: auto;
+    max-width: 100%; /* 95% */
+    border: 1px solid #666666;
+    border-left: none;
+    border-right: none; 
+           
+}
+          
+.gallery {
+
+    display: none;		    
+	position: absolute;
+	right: 0;		  
+    left: 0;
+    top: 0px; 
+    bottom: 0px;     	 
+    margin: auto;       
+    background: #2b2b2b;      
+    z-index: 2;            
+                                                                            	  
+}
+
+
+.catalog {
+
+    display: none;		    
+	position: absolute;
+	right: 0;		  
+    left: 0;
+    max-width: 80%;
+    /*width: 580px;*/
+    /*height: 200px;*/
+    top: calc(12%); 
+    /*bottom: 0px;*/
+    height: auto;
+    margin: auto;       
+    background: #fff;      
+    z-index: 2;     
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.4);            
+                                                                            	  
+}
+
+          
+</style>
+</head>
+<body>
+  <header>
+
+  </header>
+    <main>
+      <section>
+        <div class="sticker"><h1>Astronomical journal</h1></div>
+        
+        <!--значок close-->  
+        <!--<div id="close" class="icon" onclick="hideGallery()">
+            <img src="img/images.jpeg" alt="icon">
+        </div>-->
+        
+        <span id="close" class="icon" onclick="hideGallery()">&times;</span>
+
+        <h2>Experimental project</h2>
+        <p>Float elements, pop-up gallery without using the jquery library.</p>
+        <br>
+
+<p>Suspendisse potenti. Ut in luctus eros. Mauris pulvinar vehicula aliquet. Etiam imperdiet eleifend luctus. Duis ut justo nec eros ornare consectetur. Vestibulum convallis condimentum varius. Maecenas rutrum porta varius. Phasellus volutpat sem id sagittis luctus. Morbi vitae quam vitae nisi iaculis dignissim.</p>
+
+
+<div id="layer" onclick="closeLayer()"> 
+
+      <div class="gallery">
+		  <picture>			  
+		    <source media="(max-width: 405px)" srcset="img/small/starlandscape-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starlandscape-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starlandscape-b.png">	   
+            <img src="img/big/starlandscape-b.png" alt="starlandscape">
+          </picture>
+          
+          <picture>  
+            <source media="(max-width: 405px)" srcset="img/small/milky_way-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/milky_way-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/milky_way-b.png">	
+            <img src="img/big/milky_way-b.png" alt="Milky Way">
+          </picture>
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">
+            <img src="img/big/galaxy-b.png" alt="galaxy">
+          </picture>
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png">          
+            <img src="img/big/starcluster-b.png" alt="starcluster">
+          </picture>
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">                
+            <img src="img/big/andromeda-b.png" alt="andromeda">
+          </picture>
+            
+          <picture>  
+            <source media="(max-width: 405px)" srcset="img/small/supernova_1a-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/supernova_1a-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/supernova_1a-b.png"> 
+            <img src="img/big/supernova_1a-b.png" alt="supernova 1a explosion">
+          </picture>         
+		</div>
+
+    		
+		<div class="gallery">
+		  <picture>	
+		    <source media="(max-width: 405px)" srcset="img/small/observatory-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/observatory-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/observatory-b.png">	 		   
+            <img src="img/big/observatory-b.png" alt="observatory">
+          </picture>	  
+         
+          <picture>	  
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">
+            <img src="img/big/galaxy-b.png" alt="two astronomers explore the sky">
+          </picture>	
+            
+          <picture>	
+            <source media="(max-width: 405px)" srcset="img/small/console-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/console-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/console-b.png">
+            <img src="img/big/console-b.png" alt="console">
+          </picture>	
+            
+          <picture>	
+            <source media="(max-width: 405px)" srcset="img/small/telescope_at_the_observatory-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/telescope_at_the_observatory-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/telescope_at_the_observatory-b.png">
+            <img src="img/big/telescope_at_the_observatory-b.png" alt="telescope at the observatory">
+          </picture>
+		</div>
+
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>	 
+		
+		
+		
+		
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/console-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		<div class="gallery">
+		  <picture>
+		    <source media="(max-width: 405px)" srcset="img/small/starcluster-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/starcluster-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/starcluster-b.png"> 		      
+            <img src="img/big/starcluster-b.png" alt="parallaks on the example of the eye">
+          </picture>  
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/galaxy-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/galaxy-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/galaxy-b.png">  
+            <img src="img/big/galaxy-b.png" alt="parallaks on the example of a finger">
+          </picture>   
+            
+          <picture> 
+            <source media="(max-width: 405px)" srcset="img/small/andromeda-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/andromeda-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/andromeda-b.png">           
+            <img src="img/big/andromeda-b.png" alt="astronomer stands near the old telescope">
+          </picture>   
+            
+          <picture>
+            <source media="(max-width: 405px)" srcset="img/small/solar_system-s.png">
+            <source media="(max-width: 635px)" srcset="img/middle/solar_system-m.png">
+            <source media="(min-width: 800px)" srcset="img/big/solar_system-b.png">  
+            <img src="img/big/solar_system-b.png" alt="solar system diagram">           
+          </picture>
+		</div>
+		
+		
+		
+  
+</div><!-- layer -->
+
+<div class="row">
+  <div class="column">
+    <div class="card">     
+        <img class="preview-cursor" src="img/small/starcluster-s.png" alt="" style="width: 100%" onclick="showGallery();currentSlide(1)">
+     
+      <div class="container">
+        <h2>Star cluster</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(1)">View</button></p>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="column">
+    <div class="card">      
+        <img class="preview-cursor" src="img/small/milky_way-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(2)">
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(2)">View</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">      
+        <img class="preview-cursor" src="img/small/starlandscape-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(3)">
+      
+      <div class="container">
+        <h2>Star landscape</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(3)">View</button></p>
+      </div>
+    </div>
+  </div>
+            
+  <div class="column">
+    <div class="card">
+        <img src="img/small/solar_system-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(4)">
+      <div class="container">
+        <h2>Galaxy 4</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(4)">View</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+        <img src="img/small/andromeda-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(5)">
+      <div class="container">
+        <h2>Galaxy 5</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(5)">View</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+        <img src="img/small/telescope_at_the_observatory-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(6)">
+      <div class="container">
+        <h2>Galaxy 6</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(6)">View</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+        <img src="img/small/observatory-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(7)">
+      <div class="container">
+        <h2>Galaxy 7</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(7)">View</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+        <img src="img/small/console-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(8)">
+      <div class="container">
+        <h2>Galaxy 8</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(8)">View</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+        <img src="img/small/telescope_at_the_observatory-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(9)">
+      <div class="container">
+        <h2>Galaxy 9</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(9)">View</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+        <img src="img/small/supernova_1a-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(10)">
+      <div class="container">
+        <h2>Galaxy 10</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(10)">View</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+        <img src="img/small/supernova_1a-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(11)">
+      <div class="container">
+        <h2>Galaxy 11</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(11)">View</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="img/small/supernova_1a-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(12)">
+      <div class="container">
+        <h2>Galaxy 12</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(12)">View</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="img/small/supernova_1a-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(13)">
+      <div class="container">
+        <h2>Galaxy 13</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(13)">View</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="img/small/supernova_1a-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(14)">
+      <div class="container">
+        <h2>Galaxy 14</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(14)">View</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="img/small/supernova_1a-s.png" alt="" style="width:100%" onclick="showGallery();currentSlide(15)">
+      <div class="container">
+        <h2>Galaxy 15</h2>
+        <p class="title">Catalog</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p><button class="button" onclick="showCard();currentSlide(15)">View</button></p>
+      </div>
+    </div>
+  </div>
+</div><!-- row -->
+
+
+
+
+<div id="group">
+  
+    <div class="catalog">           
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>  
+     
+      <div class="container">
+      
+        <h2>Star cluster</h2>
+        <p class="title">Catalog</p>
+        <p>Star cluster</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Milky Way</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Star landscape</h2>
+        <p class="title">Catalog</p>
+        <p>Star landscape</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy4</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy5</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy6</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+      
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>  
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy7</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy8</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy9</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy10</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy11</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy12</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy13</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy14</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="catalog">      
+        
+        <span class="iconCard" onclick="hideGroup()">Close</span>
+        <span class="iconBottom" onclick="hideGroup()">Close</span>
+      
+      <div class="container">
+        <h2>Milky Way</h2>
+        <p class="title">Catalog</p>
+        <p>Galaxy15</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="mail">example@example.com</p>
+        <p></p>
+      </div>
+    </div>
+ 
+ 
+ 
+    
+    
+   
+</div>
+
+
+
+
+
+        <div id="description">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget venenatis ligula. Ut lacinia at dolor vitae pulvinar. Aliquam pretium dignissim eros. Integer faucibus, dui non aliquet bibendum, lectus orci lobortis odio, ornare porttitor est tellus eget velit. Nulla eros elit, malesuada id neque vel, viverra vehicula neque. Nullam auctor turpis non leo iaculis finibus. Quisque blandit arcu venenatis libero tempor, ac pulvinar ligula dapibus.</p>
+
+        <!--<a href="img/big/observatory-b.png" id="small-2">
+		  <img src="img/middle/observatory-m.png" alt="observatory">
+		</a>-->
+
+        <p>Suspendisse potenti. Ut in luctus eros. Mauris pulvinar vehicula aliquet. Etiam imperdiet eleifend luctus. Duis ut justo nec eros ornare consectetur. Vestibulum convallis condimentum varius. Maecenas rutrum porta varius. Phasellus volutpat sem id sagittis luctus. Morbi vitae quam vitae nisi iaculis dignissim.</p>
+        </div>
+        
+        <p>Suspendisse potenti. Ut in luctus eros. Mauris pulvinar vehicula aliquet. Etiam imperdiet eleifend luctus. Duis ut justo nec eros ornare consectetur. Vestibulum convallis condimentum varius. Maecenas rutrum porta varius. Phasellus volutpat sem id sagittis luctus. Morbi vitae quam vitae nisi iaculis dignissim.</p>
+        
+        <footer>
+        <p>Suspendisse potenti. Ut in luctus eros. Mauris pulvinar vehicula aliquet. Etiam imperdiet eleifend luctus. Duis ut justo nec eros ornare consectetur. Vestibulum convallis condimentum varius. Maecenas rutrum porta varius.</p>
+        </footer>  
+
+      </section>
+    </main>
+    
+<script>
+
+var layer = document.getElementById("layer");
+var iconClose = document.getElementById('close');
+var grp = document.getElementById("group");
+
+function showCard() {
+  
+  grp.style.display = "block";
+
+} 
+
+function hideGroup() {
+  
+  grp.style.display = "none";
+
+} 
+                   
+function showGallery() {
+  layer.style.display = "block";
+  iconClose.style.display = "block";
+}
+
+function hideGallery() {
+  layer.style.display = "none";
+  iconClose.style.display = "none";
+}
+
+function closeLayer() {
+  layer.style.display = "none";
+  iconClose.style.display = "none";
+}
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("gallery");
+  var info = document.getElementsByClassName("catalog");
+  
+  if (n > slides.length) {
+      slideIndex = 1
+  }
+  
+  if (n > info.length) {
+      slideIndex = 1
+  }
+  
+  if (n < 1) {
+      slideIndex = slides.length
+  }
+  
+  if (n < 1) {
+      slideIndex = info.length
+  }
+  
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  
+  for (i = 0; i < info.length; i++) {
+      info[i].style.display = "none";
+  }
+  
+  slides[slideIndex-1].style.display = "block";
+  info[slideIndex-1].style.display = "block";
+  
+}           
+                                           
+</script>    
+  
+</body>
+</html>
+
