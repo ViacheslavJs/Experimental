@@ -38,7 +38,7 @@ body {
 .column {
 
     float: left;
-    width: 47%;
+    width: 50%;
     margin-bottom: 16px;     
     padding: 0 8px; 
   
@@ -46,17 +46,28 @@ body {
 
 
 /***** media *****/
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 375px) {
 
   .column {
   
-    min-width: 100%;
+    width: 100%;
     display: block; 
     
   }      
   
 }
 
+@media screen and (min-width: 740px) {
+
+  .column {
+  
+    width: 33.3%;
+    display: block; 
+    
+  }      
+  
+}
+	
 /*@media screen and (max-width: 375px) {*/
 
   /*html {
@@ -191,11 +202,7 @@ main {
       
 #description  {
 			
-    margin-top: 50px; 
-    
-    /*clear: both;*/
-    border: 1px solid green;
-    
+    margin-top: 2.5%;        
      
 }
 	  
@@ -479,7 +486,7 @@ img {
     display: block;
     margin: auto;
     max-width: 100%; /* 95% */
-    /*border: 1px solid #666666;*/
+    border: 1px solid #666666;
     border-left: none;
     border-right: none; 
            
