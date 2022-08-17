@@ -6542,6 +6542,13 @@ function closeLayer() {
   offEffect();  
 }
 
+function(event) {
+            event = event || window.event;
+            if(event.preventDefault) {
+                event.preventDefault();
+            } else {
+                event.returnValue = false;
+            }
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -6600,6 +6607,7 @@ function showSlides(n) {
       slides[slideIndex-1].style.top = 0 + "px";
   }
   
+}
   
   /*
   // способ 1 - самый примитивный
