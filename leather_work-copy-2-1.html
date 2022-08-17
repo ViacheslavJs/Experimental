@@ -6493,11 +6493,17 @@ function hideGroup() {
   grp.style.display = "none";
 } 
                    
-function showGallery() {  
+function(event) {
+            event = event || window.event;
+            if(event.preventDefault) {
+                event.preventDefault();
+            } else {
+                event.returnValue = false;
+            }showGallery() {  
   layer.style.display = "block";
   iconClose.style.display = "block";  
   onEffect(); 
-       
+	    }     
 ///////////////////////////////////////////////////////////////////
 /*
   var sizeLayer = document.getElementById("layer"); 
