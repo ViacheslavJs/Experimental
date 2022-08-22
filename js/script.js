@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // отправка с помощью ajax(а именно fetch):
       if (error === 0) {
       	form.classList.add("_sending"); // добавляем класс
-         let response = await fetch( "sendmail.php", {
+        /*let response = await fetch( "sendmail.php", {
             method: "POST",
          	body: formData
          });
@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
          } else {
          	alert("Ошибка!");
          	form.classList.remove("_sending"); 
-         }
+         }*/
       } else {
       	alert("Заполните обязательные поля!");
       }
