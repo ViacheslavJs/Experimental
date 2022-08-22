@@ -16,6 +16,15 @@ order.onclick = function () {
 	formLayer.style.display = "block";
 	modalForm.style.display = "block";
 	onEffect();
+	disablePageScrolling();
+}
+
+function disablePageScrolling () {
+	 pageScroll.style.overflowY = "hidden";
+}
+
+function enablePageScrolling () {
+	 pageScroll.style.overflowY = "visible";
 }
 
 let onEffect = 
@@ -35,24 +44,26 @@ let offEffect =
 function showCard() {  
   grp.style.display = "block";
   onEffect();
-  pageScroll.style.overflowY = "hidden";
+  disablePageScrolling();
 } 
 
 function hideGroup() {  
   grp.style.display = "none";
   offEffect();
-  pageScroll.style.overflowY = "";
+  enablePageScrolling();
 } 
 
 function hideformLayer() {  
   formLayer.style.display = "none";
   offEffect();
+  enablePageScrolling();
 }
                    
 function showGallery() {  
   layer.style.display = "block";
   iconClose.style.display = "block";  
-  onEffect(); 
+  onEffect();
+  disablePageScrolling(); 
        
 ///////////////////////////////////////////////////////////////////
 /*
@@ -83,13 +94,15 @@ function showGallery() {
 function hideGallery() {	
   layer.style.display = "none";
   iconClose.style.display = "none"; 
-  offEffect();   
+  offEffect();
+  enablePageScrolling();
 }
 
 function closeLayer() {
   layer.style.display = "none";
   iconClose.style.display = "none";  
-  offEffect();  
+  offEffect();
+  enablePageScrolling();
 }
 
 
