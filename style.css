@@ -5544,7 +5544,7 @@ body {
     max-width: 100%; /* 550px по курсу */
     margin: 0px auto;
     color: #3e5e8c;
-    padding: 40px 10px; /* 30px 0; по курсу */ 
+    padding: 40px 10px; /* 30px 0; по курсу */ position: absolute;
 }
 
 .form * {
