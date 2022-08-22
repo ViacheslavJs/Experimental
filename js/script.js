@@ -12,12 +12,6 @@ let modalForm = document.getElementById("modalForm");
 let effect = document.getElementsByClassName("forEffects");
 let pageScroll = document.getElementsByTagName("body")[0];
 
-order.onclick = function () {
-	formLayer.style.display = "block";
-	modalForm.style.display = "block";
-	onEffect();
-	disablePageScrolling();
-}
 
 function disablePageScrolling () {
 	 pageScroll.style.overflowY = "hidden";
@@ -40,6 +34,13 @@ let offEffect =
        effect[i].classList.remove("filterBlurGrayscale");
       }  
     };
+    
+order.onclick = function () {
+    formLayer.style.display = "block";
+    modalForm.style.display = "block";
+    onEffect();
+    disablePageScrolling();
+}
 
 function showCard() {  
   grp.style.display = "block";
