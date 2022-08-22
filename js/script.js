@@ -10,6 +10,7 @@ let formLayer = document.getElementById("formLayer");
 let modalForm = document.getElementById("modalForm");
 
 let effect = document.getElementsByClassName("forEffects");
+let pageScroll = document.getElementsByTagName("body")[0];
 
 order.onclick = function () {
 	formLayer.style.display = "block";
@@ -34,11 +35,13 @@ let offEffect =
 function showCard() {  
   grp.style.display = "block";
   onEffect();
+  pageScroll.style.overflowY = "hidden";
 } 
 
 function hideGroup() {  
   grp.style.display = "none";
   offEffect();
+  pageScroll.style.overflowY = "";
 } 
 
 function hideformLayer() {  
