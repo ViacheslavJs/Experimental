@@ -5774,9 +5774,9 @@ textarea.form__input {
 .form__button {
 	 width: 55%; /* 100% по уроку */
 	 margin: auto; /* моя строка */
-	 display: flex;
+	 /*display: flex;
 	 justify-content: center;
-	 align-items: center;
+	 align-items: center;*/
 	 min-height: 40px; /* 60px по уроку */
 	 background-color: green; /*background-color: #7a956b;  по уроку  */
 	 color: #fff;
@@ -5789,8 +5789,8 @@ textarea.form__input {
 	 /*box-shadow: 0 5px 0 #161b13;  по курсу */
 	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);     
 	 transition: background-color 0.2s ease 0s;
-	 position: relative;
-	 top: 0;
+	 /*position: relative;*/
+	 /*top: 0;*/
 	 outline: 0; /* моя строка */
 	 border: none; /* моя строка */
 	 padding: 8px;
