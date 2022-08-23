@@ -5364,11 +5364,11 @@ footer p {
 	 position: absolute;
 	 right: 0;		  
     left: 0;
-    top: 0;                            /* добавить в проект */
+    /*top: 0;*/                            /* добавить в проект */
     max-width: 450px; /* 90% */
     /*width: 580px;*/
     /*height: 200px;*/
-    /*top: calc(5%);*/
+    top: calc(10%);
     /*bottom: 0px;*/
     height: auto;
     margin: auto;       
