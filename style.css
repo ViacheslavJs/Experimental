@@ -5369,7 +5369,7 @@ footer p {
     /*height: 200px;*/
     /*top: calc(5%); */
     /*bottom: 0px;*/
-    height: 550px; overflow: auto;
+    height: auto; 
     margin: auto;       
     background: #fff;      
     z-index: 2;     
