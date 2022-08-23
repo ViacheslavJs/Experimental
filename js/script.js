@@ -43,32 +43,32 @@ order.onclick = function () {
 	 formLayer.style.display = "block";
 	 modalForm.style.display = "block";
 	 onEffect();
-	 disablePageScrolling();
+	 //disablePageScrolling();
 }
 
 function showCard() {  
   grp.style.display = "block";  
   onEffect();
-  disablePageScrolling(); 
+  //disablePageScrolling(); 
 } 
 
 function hideGroup() {  
   grp.style.display = "none";  
   offEffect();
-  enablePageScrolling();
+  //enablePageScrolling();
 } 
 
 function hideformLayer() {  
   formLayer.style.display = "none";
   offEffect();
-  enablePageScrolling();
+  //enablePageScrolling();
 }
                    
 function showGallery() {  
   layer.style.display = "block";
   iconClose.style.display = "block";  
   onEffect(); 
-  disablePageScrolling();
+  //disablePageScrolling();
        
 ///////////////////////////////////////////////////////////////////
 /*
@@ -100,14 +100,14 @@ function hideGallery() {
   layer.style.display = "none";
   iconClose.style.display = "none"; 
   offEffect();
-  enablePageScrolling();   
+  //enablePageScrolling();   
 }
 
 function closeLayer() {
   layer.style.display = "none";
   iconClose.style.display = "none";  
   offEffect();
-  enablePageScrolling();  
+  //enablePageScrolling();  
 }
 
 
