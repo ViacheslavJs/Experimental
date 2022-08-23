@@ -5364,10 +5364,10 @@ footer p {
 	 position: absolute;
 	 right: 0;		  
     left: 0;
-    max-width: 90%;
+    max-width: 450px; /*90%;*/
     /*width: 580px;*/
     /*height: 200px;*/
-    top: calc(5%); 
+    /*top: calc(5%); */
     /*bottom: 0px;*/
     height: auto;
     margin: auto;       
