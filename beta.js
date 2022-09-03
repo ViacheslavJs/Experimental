@@ -252,7 +252,7 @@ function showImg(w) {
   
   // способ 2 - более точное центрирование
   let differenceLayerImg = heightSingleLayer - heightBigImg;
-  let remain = (differenceLayerImg + 50) / 2;
+  let remain = differenceLayerImg / 2;
   
   if (heightBigImg < heightSingleLayer) {
       bigImg[imgIndex-1].style.top = remain + "px"; 
