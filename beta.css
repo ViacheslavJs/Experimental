@@ -6400,6 +6400,16 @@ div > a {
 
 }
 
+@media (orientation: landscape) {
+
+  .single-image {
+
+    max-height: 85%;
+
+  }
+
+}
+
 
 .single-image > img {
 
