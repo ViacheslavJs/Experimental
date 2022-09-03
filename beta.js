@@ -182,7 +182,7 @@ function showSlides(n) {
   
   // способ 2 - более точное центрирование
   let differenceLayerGallery = heightLayer - heightGallery;
-  let remainder = (differenceLayerGallery + 150) / 2;
+  let remainder = (differenceLayerGallery + 50) / 2;
   
   if (heightGallery < heightLayer) {
       slides[slideIndex-1].style.top = remainder + "px"; 
