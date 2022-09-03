@@ -177,7 +177,7 @@ function showSlides(n) {
   let heightLayer = sizeLayer.offsetHeight;                                     
   //console.log(heightLayer);
 
-  let heightGallery = slides[slideIndex-1].offsetHeight + 40;
+  let heightGallery = slides[slideIndex-1].offsetHeight + 150;
   //console.log(heightGallery);
   
   // способ 2 - более точное центрирование
