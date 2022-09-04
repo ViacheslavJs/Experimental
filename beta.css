@@ -6400,11 +6400,11 @@ div > a {
 
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
 
   .single-image {
-
-    max-width: auto;  
+    
+    max-width: auto;
     max-height: 30%;
 
   }
