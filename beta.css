@@ -6378,7 +6378,7 @@ div > a {
     font-size: 37px;
     font-weight: bold; /* без bold не работает */
     top: calc(-20px);
-    right: calc(37px);
+    right: calc(0px);
      
   }
 
@@ -6404,7 +6404,7 @@ div > a {
 
   .single-image {
     
-    max-height: 100%;
+    max-height: calc(100% - 15px);
 
   }
 
