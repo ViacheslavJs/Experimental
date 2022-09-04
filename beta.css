@@ -6390,7 +6390,7 @@ div > a {
 
     display: none;		    
 	 position: absolute;
-	 max-width: 85%;
+	 max-width: calc(100% - 20px);
 	 right: 1px;		  
     left: 1px;
     top: 0px; 
@@ -6404,8 +6404,7 @@ div > a {
 
   .single-image {
     
-    max-width: auto;
-    max-height: 30%;
+    max-height: 80%;
 
   }
 
