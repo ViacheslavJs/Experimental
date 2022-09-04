@@ -6406,6 +6406,7 @@ div > a {
   .single-image {
   
     max-width: calc(66%);
+    margin: auto;
   
   }
 
