@@ -6404,6 +6404,7 @@ div > a {
 
   .single-image {
 
+    max-width: auto;  
     max-height: 30%;
 
   }
