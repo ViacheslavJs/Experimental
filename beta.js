@@ -79,20 +79,20 @@ function buttonCancel() {
 function showSingleImg() {  
   singleLayer.style.display = "block";
   onEffect(); 
-  //disablePageScrolling();
+  disablePageScrolling();
 }
 
 
 function hiddeSingleImg() {	
   singleLayer.style.display = "none"; 
   offEffect();
-  //enablePageScrolling();   
+  enablePageScrolling();   
 }
 
 function closeSingleLayer() {
   singleLayer.style.display = "none";  
   offEffect();
-  //enablePageScrolling();  
+  enablePageScrolling();  
 }
 
                    
