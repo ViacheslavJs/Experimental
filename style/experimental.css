@@ -1,0 +1,703 @@
+
+html {   
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 18px;
+  background-color: gray;       
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;   
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit;  
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-bottom: 25px;     
+  padding: 0 8px;    border: 1px solid blue;     
+}
+
+
+/***** media *****/
+@media screen and (max-width: 375px) {
+
+  .column {  
+    display: block; 
+    width: 100%;       
+  }    
+  
+}
+
+@media screen and (min-width: 740px) {
+
+  .column {
+    display: block;  
+    width: 33.3%;        
+  }        
+  
+}
+
+@media screen and (min-width: 1000px) {
+
+  .column {
+    display: block;  
+    width: 25%;        
+  }        
+  
+}
+
+@media screen and (min-width: 376px) {
+
+  .box {			 
+	 max-width: 100%;
+	 height: calc(28vw);
+	 margin: auto;           
+	 overflow: hidden;			 border: 1px solid red;	 
+  }
+
+} 
+
+@media screen and (min-width: 740px) {
+
+  .box {	 
+	 max-width: 100%;
+	 height: calc(20vw);
+	 margin: auto;           
+	 overflow: hidden;	 border: 1px solid red;	
+  }
+
+} 
+
+
+
+@media screen and (min-width: 1000px) {
+
+  .box {			 
+	 max-width: 100%;
+	 height: calc(15vw);
+	 margin: auto;           
+	 overflow: hidden;	border: 1px solid red;	                            
+  }        
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  .box {	
+	 max-width: 100%;
+	 height: calc(14vw);
+	 margin: auto;           
+	 overflow: hidden;         border: 1px solid red;	
+  }        
+
+}
+/***************************************/
+
+.container {
+  padding: 0 16px;  
+  border: 1px solid #fff;     
+}
+
+.container::after, .row::after {
+  display: table;
+  content: "";
+  clear: both;     
+}
+
+
+header {
+  height: 200px;
+  background: url("../img/header.png") no-repeat center;                                    
+  background-size: cover;  
+                   
+}
+
+article.page {  
+  min-height: calc(100%);  border: 1px solid green;
+  margin: 0;
+  padding: 15px;             
+}
+
+article.projects { 
+  max-width: 100%;  
+  min-height: calc(100%);    
+  margin: 5px auto 10px auto; 
+  padding: 5px 0 25px 0;      
+  /*background: #e0d5c3;
+  border: 1px solid #e0d5c3*/;      border: 2px solid cyan;
+  color: #4d4d4e; 
+}
+
+@media screen and (min-width: 764px) {
+
+  article.projects {  
+    max-width: 742px;            
+  }
+
+}
+
+
+.intro { 
+  max-width: 100%; 
+  min-height: calc(100%);   
+  margin: 20px auto 10px auto; 
+  padding: 5px 0 0 0;          
+  /*background: #e0d5c3;
+  border: 1px solid #e0d5c3*/;      border: 2px solid yellow;    
+  color: #4d4d4e; 
+}
+
+@media screen and (min-width: 764px) {
+
+  .intro {  
+     max-width: 742px;            
+  }
+
+}
+
+
+      
+main {
+  width: 100%;
+  height: 100%;
+  margin: auto;    		 
+}
+ 
+.title {
+  margin: 8px;
+  color: grey;  
+}
+	  
+p {
+  line-height: 1.5;
+  padding: 0 10px 0 10px;	   /*border: 1px solid red;*/
+  font-size: 1rem;
+  color: #4d4d4e; 
+}
+
+li > p {
+  line-height: 1.1;
+  margin: 12px 10px 0 0;
+  padding: 0 10px 0 0;
+}
+
+ul {
+  margin-left: 0px; 
+}
+
+.container > p {
+  margin-top: 8px;
+  padding: 0 10px;	
+  text-align: center;   
+}
+
+h1 {	 
+  font-family: serif; /* FreeMono */
+  font-size: 2rem; /* 32px - аналог от 16 */
+  margin: 30px 0 0 10px;                  border: 1px solid red;
+  color: red;   
+}
+
+h2 {
+  font-size: 1.5rem; /* 24px - аналог от 16 */
+  font-weight: 400;
+  margin: 20px 0 0 10px;
+  color: gray;
+}
+
+
+/*************** контент в aside *****************/
+.project-presentation {   
+  position: relative;
+  max-width: 100%;        
+  /*padding: 5px;*/
+  /*border: 1px solid rgba(0, 0, 0, 0.04);   */    
+  /*margin: auto;*/    
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); TODO - установить для окантовки с тенью */
+  margin: 25px 10px; 
+  color: #4d4d4e; 
+  overflow: hidden;   
+}
+
+.project-presentation > p {       
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 8px 0; /* padding: 8px 13px; TODO - установить если установлена окантовка с тенью */
+  /*font-style: italic;*/  /*border: 1px solid yellow;*/
+  /*color: #3e5e8c; */       
+}
+
+.presentation-preview {    
+  width: 100%;
+  height: auto;
+  /*border: 1px solid green; */
+  overflow: hidden;    
+}
+
+.presentation-preview > img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; 
+  /*margin: auto;  */
+  cursor: pointer;
+  transition: 0.2s; 
+}
+
+.presentation-preview > img:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 640px) {
+
+  .presentation-preview {      
+    float: left;
+    width: 50%;      
+  }
+  
+  .project-presentation > p {   
+    float: left;
+    width: 50%; 
+    height: auto;
+    padding: 3%;
+    text-align: center;   
+  }
+
+}
+/************************************/
+
+      
+footer {
+  width: 100%;
+  height: auto; /* TODO - обязательно */ 
+  margin-top: 5px;
+  background: #e2e2e2;           
+  border: 1px solid #e2e2e2; /* TODO - border обязательно */   				
+}
+			
+footer p {
+  padding: 10px 15px 15px;   
+}	  
+
+.icon {
+  display: none;
+  position: fixed;	        
+  top: 20px;
+  right: 30px;	    	
+  z-index: 3;
+  border-radius: 7px; 
+  color: #fff; /* color: gray; */
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.2s;   		      
+}
+	  
+.icon:hover,
+.icon:focus {
+  top: 17px;  
+  right: 27px;         
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 47px;	
+}
+
+
+/* Animation for icon */
+.icon {
+  animation-name: draw;
+  animation-duration: 0.6s; 
+}
+
+@keyframes draw {
+  from {transform:scale(2)} /* 2 или 0 */
+  to {transform:scale(1)}
+}
+
+.preview-cursor {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.preview-cursor:hover {
+  opacity: 0.8;
+}
+
+
+/* Animation for gallery */
+.gallery {
+  animation-name: appearance;  
+  animation-duration: 0.6s; 
+}
+
+@keyframes appearance {                               
+  from {transform:scale(0)}
+  to {transform:scale(1)}    
+}
+
+.preview-cursor {    
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.preview-cursor:hover {    
+  opacity: 0.8;      
+}
+/**********************/
+
+	 	 	      
+#layer {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;		    
+  background: rgba(0, 0, 0, 0.7); 
+  /*background: rgba(256, 256, 256, 0.7);  цвет подложки */
+  z-index: 1;	      
+  overflow: auto;
+	
+  animation-name: rev;
+  animation-duration: 0.6s; 	
+}
+	  
+.box > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto; 
+  /*height: 100%;*/
+  /*border: 1px solid #666666;*/ 
+  /*border: 1px solid #fff;*/
+  /*border-left: none;
+  border-right: none;*/       
+  object-fit: cover;
+  object-position: center;           
+}
+
+picture img {
+  display: block; 
+  max-width: 100%; /* 95% */
+  margin: auto;	
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.4);		
+}	
+          
+.gallery {
+  display: none;		    
+  position: absolute;   
+  right: 1px;		  
+  left: 1px;
+  top: 0; 
+  max-width: 100%;         	 
+  margin: auto; 
+  z-index: 2;                                                                                        	  
+}
+
+/*
+@media screen and (orientation: landscape) {
+   
+  .gallery {  
+    max-width: calc(70%); 
+    margin: auto;  
+  }
+
+}
+
+@media screen and (min-width: 720px) {
+
+  .gallery  {  
+    max-width: 720px;            
+  }
+
+}
+*/	
+
+.filter-blur-grayscale {
+	 /*filter: blur(2px);*/
+  filter: grayscale(100%); /*меняет цвет на чёрно-белый*/	
+}
+
+#copyright {   
+  position: relative;
+  margin-top: 10%; /* TODO  - предотвращает схлопывание контентной части footer при малом 
+	                             кол-ве контента */	
+  background: #91a1b1;
+  border: 1px solid #a2a2b1;
+}
+
+#copyright p {    
+  position: relative;
+  padding: 5px;
+  font-size: 13px;
+  text-align: center;
+  color: white;            
+}
+
+.logo {
+  position: absolute;
+  bottom: calc(42%);
+  left: 0; 
+  right: 0;
+  width: 55px;
+  margin: auto;
+  z-index: 1;
+  opacity: 0.9;   
+}
+
+.company {
+  margin-top: 38px; 
+}
+
+
+
+/****************************/
+
+.gallery.animation {
+  display: none;		    
+  position: relative;   
+  right: 0;		  
+  left: 0;
+  top: 0; 
+  max-width: 100%; 
+  margin: auto;         	 
+  border: 1px solid #b5e2f9;
+  z-index: 2;       
+  overflow: hidden;                                                                                 	  
+}
+
+.gallery.animation > img {
+  display: block;
+  margin: auto; 
+  max-width: 100%;          
+  box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.4);		  	
+}	
+
+/***********************/		
+#lighthouse {
+  position: absolute;
+  top: 7%; 
+  right: 10%;	
+  width: 38%;
+  height: 88%; 
+  z-index: 3;
+  background: url("../animation/lighthouse.png") no-repeat;	  
+  background-size: 100%;	          
+}	
+
+								
+#ship {
+  position: absolute;
+  left: -200px;
+  top: 50%;	
+  width: 15%;
+  height: 26%;
+  background: url("../animation/ship.png") no-repeat;
+  background-size: 100%;  	 
+  z-index: 2;  
+		  
+  animation-name: ship; 
+		    
+  animation-delay: 5s;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;		    	    
+}
+	
+@keyframes ship {
+  0% {left: -100px;}
+  100% {left: 1200px;}			   
+}
+		
+		
+#steeringwheel {
+  width: 15%;
+  height: 25%;
+  background: url("../animation/steering_wheel.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 3%;
+  bottom: 4%;		   
+  z-index: 5;
+		    		   		   
+  animation-name: steeringwheel; 
+		    		
+  animation-delay: 3s;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+		    
+}
+		   
+@keyframes steeringwheel {   
+  0% {transform: rotate(0);}
+  30% {transform: rotate(60deg);}
+  15% {transform: rotate(0);}
+  50% {transform: rotate(-60deg);}		   		    
+}		 
+
+/*		  
+#clock {
+  width: 10%;
+  height: 15%;
+  background: url("../animation/hourglass.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 2%;
+  bottom: 4%;		   
+  z-index: 5;		    		   
+		 
+  animation-name: cl; 
+		    
+  animation-delay: 4.5s;		    				    
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;		
+}
+		   
+@keyframes cl {   		    
+  0% {transform: rotate(0);}
+  100% {transform: rotate(360deg);}	 
+}	 
+*/	 
+	 		
+#light {
+  position: absolute;
+  top: calc(18% + 2px);
+  right: 25%;
+  width: 5%;
+  height: 4%;
+  margin: auto;		   
+  background-size: 100%;
+  background: rgba(237, 120, 50, 0.9);
+  border-radius: 50% 50%;  	     
+  z-index: 4;
+  		   
+  animation-name: light; 
+		   
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+		
+@keyframes light {
+  90% {opacity: 0;}
+  10% {opacity: 1;}		  		    		 
+}
+		
+		
+#postlight {
+  position: absolute;
+  top: calc(16% + 3px);
+  right: calc(22% + 3px);
+  width: 10%;
+  height: 7%;  
+  margin: auto; 		   
+  background-size: 100%;
+  background: rgba(255, 240, 0, 0.6);
+  border-radius: 50% 50%; 
+  z-index: 4;
+ 		   
+  animation-name: postlight; 
+		   
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+		
+@keyframes postlight {
+  90% {opacity: 0;}
+  20% {opacity: 1;}		  		   
+}
+
+				
+#clouds1 {
+  position: absolute;
+  left: 5%; 
+  top: 5%;
+  width: 30%;
+  height: 40%;	   
+  background: url("../animation/cloud-gray_256_256.png") no-repeat;
+  background-size: 90%;  
+  z-index: 1;
+		   
+  transform: scale(0.5, 0.5);
+  animation-name: clouds1; 
+		   
+  animation-duration: 150s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;	   
+}
+		
+@keyframes clouds1 {
+  0% {left: -125px;}
+  100% {left: 1200px;}
+}
+
+		
+#clouds2 {
+  position: absolute;
+  left: 0;
+  top: -15%;
+  width: 40%;
+  height: 50%;	   
+  background: url("../animation/cloud-gray_256_256.png") no-repeat;
+  background-size: 100%;	   
+  z-index: 5;
+  opacity: 0.8;
+		   
+  transform: scale(0.5, 0.5);
+  animation-name: clouds2; 
+		   
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+		   
+}
+		
+@keyframes clouds2 {
+  0% {left: -200px;}
+  100% {left: 1200px;}
+}
+
+				
+#clouds3 {
+  position: absolute;
+  left: 10%;
+  top: 47%;
+  width: 30%;
+  height: 40%;
+  background: url("../animation/cloud_128_71.png") no-repeat;
+  background-size: 30%;    
+  z-index: 1;
+  
+  transform: scale(0.8, 0.8);
+  animation-name: clouds3;
+		    
+  animation-duration: 250s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+		
+@keyframes clouds3 {
+  0% {left: 20%;}
+  100% {left: 1200px;}
+}
+		
+@media screen and (min-width: 740px) {
+
+  .gallery.animation {
+    max-width: 800px;     
+  }                                                                          	  
+
+}
+
+
+
