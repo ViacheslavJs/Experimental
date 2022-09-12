@@ -469,7 +469,7 @@ picture img {
   top: 0; 
   max-width: 100%; 
   margin: auto;         	 
-  border: 1px solid #b5e2f9;
+  /*border: 1px solid #b5e2f9;*/
   z-index: 2;       
   overflow: hidden;                                                                                 	  
 }
