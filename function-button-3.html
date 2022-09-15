@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	 <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 
+  <title>Scope</title> 
+<style>
+				    
+/*
+@media screen and (min-width: 480px) {
+		
+       }	
+*/
+								
+html {
+  background: #303030;
+  font-family: "Arial", "Times New Roman";
+  font-size: 18px;
+  color: #ffcc00;
+}	
+
+section {
+  position: relative;
+  max-width: 970px;
+  min-height: calc(100%);
+  margin: auto;  
+  overflow: auto;
+  border: 1px solid blue; 
+}
+
+h1 {
+    text-align: center;    
+}		
+					 
+#res-out { display: none;
+    /*font-family: "Arial", "Times New Roman";
+			font-size: 32px; /*2em*/
+			color: #ffcc00; 			position: absolute; bottom: 38px; margin-left: 20px; z-index: 2;
+}
+					 
+
+					 
+.icon-return {
+    /*font-size: 32px; /*2em*/
+  display: block;
+  margin-bottom: 38px; 
+  font-size: 18px;
+  font-weight: bold; 
+  color: lime;
+}
+									 
+.dubble, 
+.comment {
+  color: silver;
+}
+
+				 
+strong {
+    color: #ffdda6;
+}
+				 
+.color-method {
+    color: #5877c6;
+}	
+
+#btn {
+  display: none;
+}
+					 
+.button-active {
+  display: block;
+  position: absolute;
+  width: 100px;
+  bottom: 28px; 
+  right: 10px; 
+  padding: 4px 10px; 
+  border: 3px solid gray; 
+  border-radius: 10px; 
+  color: lightgreen; 
+  background-color: #4b4b4b; 
+  font-size: 18px;   
+}		
+
+
+.button-active:hover {
+  background-color: #4f6146;
+}
+
+.button-active:active {
+  box-shadow: 0 0 15px lightgreen;
+  border: 3px solid green; 
+}
+	
+
+.button-inactive {
+  display: block; 
+  position: absolute; 
+  width: 100px; 
+  bottom: 28px; 
+  right: 10px; 
+  font-size: 18px; 
+  padding: 4px 10px; 
+  border: 3px solid #3a3a3a; 
+  border-radius: 10px; color: gray; 
+  background-color: #3a3a3a; 
+  outline: none; z-index: 1;
+}	
+
+.button-inactive:hover {
+  opacity: 0.5;
+}
+			 
+.form-control {
+  font-size: 18px;
+  min-width: 20px;
+  height: 20px;
+  padding: 4px;
+  border: 2px solid lightgreen;
+  border-radius: 35%;
+  /*border-left: none;*/
+  border-top: none;
+  border-bottom: none;
+  /*border-right: none;*/
+  text-align: center;
+  background: #303030; 
+  /*background: lime;*/
+  color: #ffcc00;
+  outline: none;
+  -moz-appearance: textfield;
+		
+
+}	
+
+#inputParam1 {
+  border-right: none;
+}
+
+#inputParam2 {
+  border-left: none;
+}
+
+pre {
+  font-size: 0; 
+  border: 1px solid silver; 
+  padding: 3px;
+  overflow-x: auto; 
+}
+
+code {
+  font-size: 16px;
+  color: white;
+}
+
+input {
+    width: 0; /* TODO - добавил что-бы инпут не сжимался */
+    -moz-appearance: textfield; /* TODO - убирает стрелочки "вверх-вниз" в инпуте */
+}
+  
+hr {margin-bottom: 25px;}
+
+	
+								 
+</style>
+</head>
+  <body> 
+    <section>
+	   <h1>Функция возведения в степень</h1>
+	   
+    <pre>   
+      <code>							
+<strong>function</strong> power ( base, exp ) {
+  <strong>let</strong> result = 1;
+<strong>for</strong>(<strong> let</strong> i = 0; i &lt; exp; i +=1 )
+  result *= base;
+  <strong>return</strong> result;
+}
+
+console.<strong class="color-method">log</strong>( power <input autofocus type="number" placeholder="0" class="form-control" id="inputParam1" oninput="showing()">, <input type="number" placeholder="0" class="form-control" id="inputParam2" oninput="showing()"> ); <!--<span class="comment">// </span><span class="dubble" id="type"></span>-->
+
+<span class="comment">//&nbsp;</span><span id="outParam1" class="dubble"></span><span id="outParam2" class="dubble"></span>
+      </code>
+    </pre>
+    <hr>
+<span class="icon-return">&gt;</span>
+<span id="res-out" class="result-output"></span>
+<button id="btn" class="button-output" type="button">Output</button>
+
+
+</section>	
+    <script>			  
+        		    
+function showing () {
+
+  function power ( base, exp ) {
+    let result = 1;
+    for( let i = 0; i < exp; i +=1 )
+      result *= base;         
+    return document.getElementById("res-out").innerHTML = result;
+  }
+
+  let param1;
+  let param2;
+  let check;
+			
+  param1 = document.getElementById("inputParam1").value * 1;
+  param2 = document.getElementById("inputParam2").value * 1;
+  check = param1 + param2;
+
+
+  //document.getElementById("type").innerHTML = "typeof: " + typeof param1;
+  document.getElementById("outParam1", "outParam2").innerHTML = param1 + " to the power of " + param2;
+
+
+  let searchElement = document.getElementsByTagName("input"); 
+
+    for (let i = 0; i < searchElement.length; i++) {
+      searchElement[i].addEventListener('input', function () {
+      this.style.width = 0;
+      this.style.width = this.scrollWidth + 'px';
+      });
+    }  
+
+
+  /* https://ru.stackoverflow.com/questions/648942/html-css-js
+
+  document.querySelector('input').addEventListener('input', function () {
+  this.style.width = 0;
+  this.style.width = this.scrollWidth + 'px';
+  });
+
+  */
+  
+  let buttonDisplayControl = document.getElementById("btn");
+  let resultDisplayControl = document.getElementById("res-out");
+  
+    if ( param1 && param2 ) {         
+      power(param1, param2);
+      buttonDisplayControl.classList.remove("button-inactive");    
+      buttonDisplayControl.classList.add("button-active");  
+    } 	   
+	
+				  		   
+    if ( power( param1, param2 ) >= check || power( param1, param2 ) <= param1 ) {	
+	   resultDisplayControl.style.display =  "none";	 
+    }
+				  				   
+				   
+    if ( param1 == 0 || param2 == 0 ) {
+      resultDisplayControl.style.display =  "none";        
+      buttonDisplayControl.style.display =  "none";    
+    } else {
+	   buttonDisplayControl.style.display =  "block"; 
+    }	    		  	
+			  	  
+}
+
+
+    let buttonOutput = document.getElementById("btn");
+    let resultOutput = document.getElementById("res-out");
+
+    buttonOutput.onclick = function () {        
+      resultOutput.style.display = "block"; 
+      buttonOutput.classList.remove("button-active");
+      buttonOutput.classList.add("button-inactive");       
+    }
+
+    </script>
+      		
+  </body>
+</html>
