@@ -479,7 +479,7 @@ code {
 .pop-up-preview > img {
   display: block;
   margin: 20px 10px;
-  max-width: 60%; /* 95% */
+  max-width: 80%; /* 95% */
   object-fit: cover;
   object-position: center; 
   height: 100%;    
