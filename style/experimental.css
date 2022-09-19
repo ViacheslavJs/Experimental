@@ -479,9 +479,9 @@ code {
 .pop-up-preview > img {
   display: block;
   margin: 20px 10px;
-  max-width: 80%; /* 95% */
-  object-fit: cover;
-  object-position: center; border: 1px solid red;
+  width: 100%; /* 95% */
+  /*object-fit: cover;
+  object-position: center; border: 1px solid red;*/
   height: 100%;    
 }
 
