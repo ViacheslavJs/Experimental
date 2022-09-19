@@ -481,8 +481,12 @@ code {
   margin: 20px 10px;
   max-width: 80%; /* 95% */
   object-fit: cover;
-  object-position: center; 
+  object-position: center; border: 1px solid red;
   height: 100%;    
+}
+
+.pop-up-prewiev {
+  border: 1px solid green;
 }
 
 .pop-up-content {	
