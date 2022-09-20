@@ -482,15 +482,16 @@ code {
   border: 1px solid red;
  /* object-fit: cover;
   object-position: center;*/
-  /*border: 1px solid cyan;*/
-  height: 100%; 
+  border: 1px solid cyan;
+ /* height: 100%; */
 }
 
 .pop-up-img {
   object-fit: cover;
   object-position: center;
-  /*border: 1px solid cyan;*/
+  border: 1px solid red;
   height: 100%; 
+  width: 100%;
 }
 
 .pop-up-content {	
@@ -500,7 +501,7 @@ code {
 }
 
 .pop-up-text .title {
-  color: red;
+  color: green;
 }
 
 .pop-up-text > p {
