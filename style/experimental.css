@@ -479,10 +479,10 @@ code {
 .i.img {
   display: block;
   margin: 20px 10px;
-  max-width: 100%; /* 95% */
-  object-fit: cover;
-  object-position: center; border: 1px solid cyan;
-  height: 100%;    
+  width: 100%; /* 95% */
+  /*object-fit: cover;
+  object-position: center; border: 1px solid cyan;*/
+  /*height: 100%; */   
 }
 
 .pop-up-prewiev {
