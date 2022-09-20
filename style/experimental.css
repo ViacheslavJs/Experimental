@@ -476,7 +476,7 @@ code {
   z-index: 2;                                                                             	  
 }
 
-.pop-up-prewiev {
+.pop-up-prewiev > img {
   display: block;
   margin: 20px 10px;
   max-width: 45%; /* 95% */
@@ -496,7 +496,7 @@ code {
 }
 
 .pop-up-content .title {
-  
+  color: red;
 }
 
 .pop-up-text > p {
