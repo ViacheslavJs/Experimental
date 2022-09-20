@@ -477,21 +477,20 @@ code {
 }
 
 .pop-up-prewiev {
-  max-width: 100px;
+  /*max-width: 100px;*/
   margin: 20px 10px;
-  border: 1px solid red;
  /* object-fit: cover;
   object-position: center;*/
   border: 1px solid cyan;
- /* height: 100%; */position: relative;
+  height: 100px;
+  overflow: hidden;
 }
 
 .pop-up-img {
   object-fit: cover;
-  object-position: center;
   border: 1px solid red;
   height: 100%; 
-  width: 100%; top: 0; right: 0; left: 0;
+  width: 100%; 
 }
 
 .pop-up-content {	
