@@ -487,9 +487,13 @@ code {
 
 .pop-up-img {
   display: block;
-  max-width: 100%;
+  max-width: 45%;
   /*margin: auto;*/
-  margin: 20px 10px;
+  /*margin: 20px 10px;*/
+  border: 1px solid cyan;
+  object-fit: cover;
+  object-position: center;
+  height: 100%; 
 }
 
 .pop-up-content {	
@@ -499,7 +503,7 @@ code {
 }
 
 .pop-up-text .title {
-  color: red;
+  color: green;
 }
 
 .pop-up-text > p {
