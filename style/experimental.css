@@ -476,17 +476,17 @@ code {
   z-index: 2;                                                                             	  
 }
 
-.i.img {
+.pop-up-prewiev {
   display: block;
   margin: 20px 10px;
-  width: 100%; /* 95% */
-  /*object-fit: cover;
-  object-position: center; border: 1px solid cyan;*/
-  /*height: 100%; */   
+  max-width: 100%; /* 95% */
+  object-fit: cover;
+  object-position: center; border: 1px solid red;
+  height: 100%; 
 }
 
-.pop-up-prewiev {
-  border: 1px solid green;
+.pop-up-img {
+  width: 100%;
 }
 
 .pop-up-content {	
