@@ -477,9 +477,9 @@ code {
 }
 
 .pop-up-prewiev {
-  display: block;
+  /*display: block;*/
   margin: 20px 10px;
- /* max-width: 45%; /* 95% */
+  max-width: 45%; /* 95% */
   object-fit: cover;
   object-position: center; border: 1px solid red;
   height: 100%; 
@@ -487,8 +487,9 @@ code {
 
 .pop-up-img {
   display: block;
-  max-width: 45%;
-  margin: auto;
+  max-width: 100%;
+  /*margin: auto;*/
+  margin: 20px 10px;
 }
 
 .pop-up-content {	
@@ -498,7 +499,7 @@ code {
 }
 
 .pop-up-text .title {
-  color: blue;
+  color: red;
 }
 
 .pop-up-text > p {
