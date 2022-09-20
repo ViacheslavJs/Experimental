@@ -479,10 +479,10 @@ code {
 .pop-up-prewiev {
   /*display: block;*/
   /*margin: 20px 10px;*/
-  max-width: 45%; 
+  width: auto; padding: 3px;
  /* object-fit: cover;
   object-position: center;*/
-  border: 2px solid cyan;
+  border: 1px solid cyan;
   /*height: 100%; */
 }
 
@@ -501,7 +501,7 @@ code {
 }
 
 .pop-up-text .title {
-  color: red;
+  color: magenta;
 }
 
 .pop-up-text > p {
