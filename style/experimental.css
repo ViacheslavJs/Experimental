@@ -478,10 +478,11 @@ code {
 
 .pop-up-prewiev {
   /*display: block;*/
-  /*margin: 20px 10px;
+  /*margin: 20px 10px;*/
   max-width: 45%; 
-  object-fit: cover;
-  object-position: center;*/ border: 2px solid cyan;
+ /* object-fit: cover;
+  object-position: center;*/
+  border: 2px solid cyan;
   /*height: 100%; */
 }
 
