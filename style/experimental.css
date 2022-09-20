@@ -477,13 +477,13 @@ code {
 }
 
 .pop-up-prewiev {
-  /*max-width: 100px;*/
+  /*max-width: 100px;*/ max-width: 45%;
   margin: 20px 10px;
  /* object-fit: cover;
   object-position: center;*/
   border: 1px solid cyan;
-  height: 100px;
-  overflow: hidden;
+  /*height: 100px;
+  overflow: hidden;*/
 }
 
 .pop-up-img {
@@ -500,7 +500,7 @@ code {
 }
 
 .pop-up-text .title {
-  color: cyan;
+  color: red;
 }
 
 .pop-up-text > p {
