@@ -477,9 +477,9 @@ code {
 }
 
 .pop-up-prewiev {
-  /*display: block;*/
-  /*margin: 20px 10px;*/
-  width: auto; padding: 3px;
+  display: block;
+  margin: 20px 10px;
+  max-width: 45%;
  /* object-fit: cover;
   object-position: center;*/
   border: 1px solid cyan;
@@ -487,11 +487,12 @@ code {
 }
 
 .pop-up-img {
-  display: block;
+  width: 100%;
+
+  /*display: block;
   max-width: 45%;
-  /*margin: auto;*/
   margin: 20px 10px;
-  border: 1px solid red;
+  border: 1px solid red;*/
 }
 
 .pop-up-content {	
@@ -501,7 +502,7 @@ code {
 }
 
 .pop-up-text .title {
-  color: magenta;
+  color: lime;
 }
 
 .pop-up-text > p {
