@@ -487,6 +487,7 @@ code {
 }
 
 .pop-up-img {
+  display: block;
   width: 100%;
 
   /*display: block;
@@ -502,7 +503,7 @@ code {
 }
 
 .pop-up-text .title {
-  color: lime;
+  color: magenta;
 }
 
 .pop-up-text > p {
