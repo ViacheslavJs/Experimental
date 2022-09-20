@@ -477,18 +477,20 @@ code {
 }
 
 .pop-up-prewiev {
-  /*max-width: 45%;*/
- /* object-fit: cover;
-  object-position: center;*/
-  /*border: 1px solid cyan;*/
-  /*height: 100%; */
-}
-
-.pop-up-img {
-  display: block;
   max-width: 45%;
   margin: 20px 10px;
   border: 1px solid red;
+ /* object-fit: cover;
+  object-position: center;*/
+  /*border: 1px solid cyan;*/
+  height: 100%; 
+}
+
+.pop-up-img {
+  object-fit: cover;
+  object-position: center;
+  /*border: 1px solid cyan;*/
+  height: 100%; 
 }
 
 .pop-up-content {	
