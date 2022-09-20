@@ -463,7 +463,7 @@ code {
 .pop-up {
   display: none;		    
   position: absolute;
-  top: calc(5%); bottom: calc(5%);
+  top: calc(5%); 
   right: 0;		  
   left: 0;
   max-width: 85%;            
@@ -481,7 +481,7 @@ code {
   margin: 20px 10px;
   max-width: 100%; /* 95% */
   object-fit: cover;
-  object-position: center; border: 1px solid red;
+  object-position: center; border: 1px solid cyan;
   height: 100%;    
 }
 
