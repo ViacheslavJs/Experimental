@@ -745,7 +745,7 @@ h3 {
 picture img {
   display: block; 
   max-width: 100%; /* 95% */
-  margin: auto; 
+  margin-bottom: 2px; 
   /*border: 2px solid rgba(0, 0, 0, 0.4);*/
   box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.4);		
 }	
@@ -754,8 +754,8 @@ picture img {
   display: none;		    
   position: absolute;
   top: 0;   
-  right: 2px;		  
-  left: 2px; 
+  right: 0px;		  
+  left: 0px; 
   max-width: 100%;         	 
   margin: auto; 
   /*padding: 5px;*/
