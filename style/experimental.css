@@ -1445,7 +1445,7 @@ footer p {
 @media screen and (orientation: landscape) {
   
   .gallery.animation {  
-    max-width: calc(73%); 
+    max-width: calc(69%); 
     margin: auto;  
   }
   
