@@ -795,7 +795,7 @@ picture img {
 @media screen and (orientation: landscape) {
    
   .gallery {  
-    max-width: calc(85%); 
+    max-width: calc(80%); 
     margin: auto;  
   }
   
