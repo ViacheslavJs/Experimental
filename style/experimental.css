@@ -801,10 +801,10 @@ picture img {
   
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 955px) {
 
   .gallery  {    
-    max-width: 645px;         
+    max-width: 720px;         
   }
 
 }
@@ -985,7 +985,7 @@ picture img {
 @media screen and (orientation: landscape) {
    
   .single-image {  
-    max-width: calc(75%); 
+    max-width: calc(80%); 
     margin: auto;  
   }
 
@@ -999,7 +999,7 @@ picture img {
 	box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.3);   	 	 	 	
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 955px) {
 
   .single-image  {  
     max-width: 720px;            
@@ -1454,7 +1454,7 @@ footer p {
 
 /* TODO - option */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 955px) {
 
   .gallery.animation {
     max-width: 560px;     
